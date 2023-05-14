@@ -1,0 +1,38 @@
+public class quick_sort{
+    public static void qsort(int a){
+        int i=1;
+        int j=a.length-1;
+        int p=a[0];
+        int temp=0;
+        while(i<=j){
+          if(p>a[i]){
+            i++;
+           }
+          else
+          break; 
+        }
+        while(i<=j){
+            if(p<a[j])
+              j++;
+            else
+            break  ;
+        }
+        if(i>j){
+          temp=a[j];
+          a[j]=a[p];
+          a[p]=temp;
+        }
+        else{
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
+        System.out.println("pivoty point is"+a[p]);
+
+    }
+    public static void main(String args[]){
+        int a[]={5,4,1,3,2};
+        
+        qsort(a);
+    }
+}
